@@ -18,7 +18,7 @@ if __name__ == '__main__':
     sock.setsockopt(zmq.SUBSCRIBE, ZMQ_OPTION['prices']['kw'])
     sock.connect(ZMQ_OPTION['clocks']['addr'])
     sock.setsockopt(zmq.SUBSCRIBE, ZMQ_OPTION['clocks']['kw'])
-    candles=Candles(3)
+    candles=Candles(10)
     # recv
     while True:
       s = sock.recv_string()
